@@ -92,8 +92,8 @@ With PHP 8.3, pawl uses some deprecated language features. Short term goal for t
 Over the longer term, the API will be changed as I'm not a fan of how connections are instantiated, after which this notice will be removed.
 
 To do:
-- [ ] ReactPHP Promise V3 Compatibility
-- [ ] Rename library
+- [x] ReactPHP Promise V3 Compatibility
+- [x] Rename library
 - [ ] Remove dynamic properties
 - [ ] Fix exception that outputs during tests (tests pass, just weird output)
 - [ ] Make major API changes
