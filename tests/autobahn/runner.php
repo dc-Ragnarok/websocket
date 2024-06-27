@@ -38,12 +38,14 @@ use React\Promise\Deferred;
                 $i++;
 
                 if ($i > (int)$numOfCases->getPayload()) {
-                    $allCases->resolve();
+                    $allCases->resolve(null);
 
                     return;
                 }
 
-                echo ".";
+                if ($i % 25 === 0) {
+                    echo $i, '/', (int)$numOfCases->getPayload(), PHP_EOL;
+                }
 
                 $connector("/runCase?case={$i}&agent=" . AGENT)->then(function(WebSocket $conn) use ($runNextCase) {
                     $conn->on('message', function($msg, $conn) {
