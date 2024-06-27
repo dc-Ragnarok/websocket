@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Ratchet\Client\Connector;
+use Ragnarok\Websocket\Connector;
 use React\EventLoop\Loop;
 use React\Promise\Promise;
 

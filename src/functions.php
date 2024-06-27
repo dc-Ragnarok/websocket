@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Client;
+
+namespace Ragnarok\Websocket;
+
 use React\EventLoop\LoopInterface;
 
 /**
@@ -7,7 +9,7 @@ use React\EventLoop\LoopInterface;
  * @param array              $subProtocols
  * @param array              $headers
  * @param LoopInterface|null $loop
- * @return \React\Promise\PromiseInterface<\Ratchet\Client\WebSocket>
+ * @return \React\Promise\PromiseInterface<\Ragnarok\Websocket\WebSocket>
  */
 function connect($url, array $subProtocols = [], $headers = [], LoopInterface $loop = null) {
     $connector = new Connector($loop);

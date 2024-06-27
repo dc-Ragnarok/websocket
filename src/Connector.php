@@ -1,6 +1,7 @@
 <?php
 
-namespace Ratchet\Client;
+namespace Ragnarok\Websocket;
+
 use Ratchet\RFC6455\Handshake\ClientNegotiator;
 use React\EventLoop\Loop;
 use React\EventLoop\LoopInterface;
@@ -136,7 +137,7 @@ class Connector {
 
         $uri = $uri->withScheme('wss' === $scheme ? 'HTTPS' : 'HTTP');
 
-        $headers += ['User-Agent' => 'Ratchet-Pawl/0.4.1'];
+        $headers += ['User-Agent' => 'Ragnarok-ws/0.4.1'];
 
         $request = array_reduce(array_keys($headers), function(RequestInterface $request, $header) use ($headers) {
             return $request->withHeader($header, $headers[$header]);
