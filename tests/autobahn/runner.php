@@ -1,13 +1,14 @@
 <?php
-use Ratchet\Client\WebSocket;
+
+use Ragnarok\Websocket\WebSocket;
 use React\Promise\Deferred;
 
     require __DIR__ . '/../../vendor/autoload.php';
 
-    define('AGENT', 'Pawl/0.4');
+    define('AGENT', 'ragnarok-ws/0.4');
 
     $connFactory = function() {
-        $connector = new Ratchet\Client\Connector();
+        $connector = new \Ragnarok\Websocket\Connector();
 
         return function($url) use ($connector) {
             return $connector('ws://127.0.0.1:9001' . $url);

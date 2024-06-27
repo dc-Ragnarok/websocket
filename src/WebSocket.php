@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Client;
+
+namespace Ragnarok\Websocket;
+
 use Evenement\EventEmitterTrait;
 use Evenement\EventEmitterInterface;
 use React\Socket\ConnectionInterface;

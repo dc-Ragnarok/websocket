@@ -4,9 +4,7 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use React\EventLoop\Factory;
-use Ratchet\Client\Connector;
-use Psr\Http\Message\RequestInterface;
+use Ragnarok\Websocket\Connector;
 
 class RequestUriTest extends TestCase {
     protected static function getPrivateClassMethod($className, $methodName) {
@@ -31,7 +29,7 @@ class RequestUriTest extends TestCase {
     function testGeneratedRequestUri($uri, $expectedRequestUri) {
         $connector = new Connector();
 
-        $generateRequest = self::getPrivateClassMethod('\Ratchet\Client\Connector', 'generateRequest');
+        $generateRequest = self::getPrivateClassMethod('\Ragnarok\Websocket\Connector', 'generateRequest');
         $request = $generateRequest->invokeArgs($connector, [$uri, [], []]);
 
         $this->assertEquals((string)$request->getUri(), $expectedRequestUri);

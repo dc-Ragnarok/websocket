@@ -1,5 +1,5 @@
 {
-    "name": "ratchet/pawl",
+    "name": "ragnarok/websocket",
     "description": "Asynchronous WebSocket client",
     "keywords": [
         "WebSocket",
@@ -11,7 +11,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Ratchet\\Client\\": "src"
+            "Ragnarok\\Websocket\\": "src"
         },
         "files": [
             "src/functions_include.php"
